@@ -1,0 +1,97 @@
+/* Start Varables */
+:root {
+  --sedans-color: hsl(31, 77%, 52%);
+  --suvs-color: hsl(184, 100%, 22%);
+  --luxury-color: hsl(179, 100%, 13%);
+  --main-color: hsl(0, 0%, 95%);
+  --paragraph-color: hsla(0, 0%, 100%, 0.75);
+  --main-duration: 0.5s;
+  --main-padding: 45px;
+  --main-margin: 40px;
+}
+/* End Varables */
+/* Start Varables */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+/* End Globel Rule */
+body {
+  background: var(--main-color);
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  border-radius: 10px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+}
+@media (max-width: 991px) {
+  main {
+    margin: calc(var(--main-margin) * 2) 15px;
+    grid-template-columns: repeat(1, 300px);
+  }
+}
+main article {
+  padding: var(--main-padding);
+}
+main article.sedans {
+  background: var(--sedans-color);
+}
+main article.suvs {
+  background: var(--suvs-color);
+}
+main article.luxury {
+  background: var(--luxury-color);
+}
+main article img {
+  margin-bottom: var(--main-margin);
+}
+main article h1 {
+  color: var(--main-color);
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: var(--main-margin);
+}
+main article p {
+  color: var(--paragraph-color);
+  line-height: 1.5;
+  margin-bottom: calc(var(--main-margin) * 2);
+}
+@media (max-width: 991px) {
+  main article p {
+    margin-bottom: calc(var(--main-margin) - 10px);
+  }
+}
+main article button {
+  background: var(--main-color);
+  border: 2px solid var(--main-color);
+  border-radius: 25px;
+  box-shadow: 0 0 5px -5px hsla(0, 0%, 0%, 0.5);
+  font-family: "Lexend Deca", sans-serif;
+  transition: var(--main-duration);
+  padding: 15px 30px;
+}
+main article.sedans button {
+  color: var(--sedans-color);
+}
+main article.suvs button {
+  color: var(--suvs-color);
+}
+main article.luxury button {
+  color: var(--luxury-color);
+}
+main article button:hover {
+  color: var(--main-color);
+  background-color: transparent;
+}
