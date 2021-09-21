@@ -6,8 +6,7 @@
   --main-color: hsl(0, 0%, 95%);
   --paragraph-color: hsla(0, 0%, 100%, 0.75);
   --main-duration: 0.5s;
-  --main-padding: 45px;
-  --main-margin: 40px;
+  --main-padding: 48px;
 }
 /* End Varables */
 /* Start Varables */
@@ -31,13 +30,18 @@ body {
 main {
   border-radius: 10px;
   overflow: hidden;
+  width: 920px;
+  height: 500px;
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(3, 1fr);
+  transform: translateY(20px);
 }
 @media (max-width: 991px) {
   main {
-    margin: calc(var(--main-margin) * 2) 15px;
-    grid-template-columns: repeat(1, 300px);
+    width: 325px;
+    height: 1335px;
+    grid-template-columns: repeat(1, 1fr);
+    transform: translateY(5px);
   }
 }
 main article {
@@ -53,7 +57,7 @@ main article.luxury {
   background: var(--luxury-color);
 }
 main article img {
-  margin-bottom: var(--main-margin);
+  margin-bottom: 32px;
 }
 main article h1 {
   color: var(--main-color);
@@ -61,16 +65,16 @@ main article h1 {
   font-size: 2.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  margin-bottom: var(--main-margin);
+  margin-bottom: 25px;
 }
 main article p {
   color: var(--paragraph-color);
-  line-height: 1.5;
-  margin-bottom: calc(var(--main-margin) * 2);
+  line-height: 1.7;
+  margin-bottom: 82px;
 }
 @media (max-width: 991px) {
   main article p {
-    margin-bottom: calc(var(--main-margin) - 10px);
+    margin-bottom: 30px;
   }
 }
 main article button {
@@ -79,8 +83,10 @@ main article button {
   border-radius: 25px;
   box-shadow: 0 0 5px -5px hsla(0, 0%, 0%, 0.5);
   font-family: "Lexend Deca", sans-serif;
+  font-size: 15px;
   transition: var(--main-duration);
-  padding: 15px 30px;
+  width: 146px;
+  height: 48px;
 }
 main article.sedans button {
   color: var(--sedans-color);
